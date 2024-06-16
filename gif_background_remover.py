@@ -19,7 +19,7 @@ def _extract_frames(input_file, output_folder='tmp'):
     return frame.info['duration']
 
 
-def _remove_background(images_path='tmp', output_folder='tmp', api_key='SywF4y5eU8mGr72purDXxgHV'):
+def _remove_background(images_path='tmp', output_folder='tmp', api_key=None):
     for img in os.listdir(images_path):
         response = requests.post(
             'https://api.remove.bg/v1.0/removebg',
